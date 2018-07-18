@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/sxxk/sxxk",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "口袋妖怪属性计算器",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color":"#000",
+    "selectedColor":"#3399FF",
+    "backgroundColor":"#eee",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/logs/logs",
+      "text": "日志"
+    }, {
+      "pagePath": "pages/sxxk/sxxk",
+      "text": "口袋妖怪",
+      "iconPath":"./ico/wikilogo1.png",
+      "selectedIconPath":"./ico/wikilogo.png"
+    }]
+  }
+}

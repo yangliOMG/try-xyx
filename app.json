@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/sxxk/sxxk",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "口袋妖怪属性计算器",
+    "navigationBarTextStyle":"black"
+  }
+}

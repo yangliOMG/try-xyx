@@ -1,0 +1,56 @@
+.pannel{margin-bottom: 120px;}
+.contain{padding: 10rpx;}
+
+.imgview{position: relative;transition: all 0.5s ease}
+.imgblock{height: 200rpx;overflow: hidden;}
+.image{width: 100%;}
+.imgtext{text-align: center; color: #3399FF;position: absolute;bottom: 0;left: 0;right: 0;
+    background:linear-gradient(to bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.9),rgba(255,255,255,1));}
+.imgexpand .imgtext{display: none;}
+
+.fixed{position: fixed;bottom: 0;padding: 10rpx;}
+.block{display: inline-block;padding: 0 14rpx;margin-right: 10rpx;height:60rpx;line-height:60rpx;border-width: 1rpx;border-style: solid;}
+
+.table{font-size:16px;}
+.tr{display:flex;width:100%;justify-content:center;align-items:center}
+.td{width:40%;justify-content:center;text-align:center;border:1px solid #ccc;}
+.th{width:40%;justify-content:center;display:flex;height:35rpx;align-items:center;border:1px solid #ccc;border-bottom: none;}
+
+
+
+.normal{background-color: #BBBBAA;border-color: #8A8A7B;}
+.normal.button-hover{background-color: #8A8A7B;}
+.fire{background-color: #FF4422;border-color: #BA1F00;}
+.fire.button-hover{background-color: #BA1F00;}
+.fighting{background-color: #BB5544;border-color: #912E1E;}
+.fighting.button-hover{background-color: #912E1E;}
+.water{background-color: #3399FF;border-color: #0D6AC8;}
+.water.button-hover{background-color: #0D6AC8;}
+.flying{background-color: #6699FF;border-color: #3678FF;}
+.flying.button-hover{background-color: #3678FF;}
+.grass{background-color: #77CC55;border-color: #40C60A;}
+.grass.button-hover{background-color: #40C60A;}
+.poison{background-color: #AA5599;border-color: #792F6A;}
+.poison.button-hover{background-color: #792F6A;}
+.electric{background-color: #FFCC33;border-color: #BD8E00;}
+.electric.button-hover{background-color: #BD8E00;}
+.ground{background-color: #DDBB55;border-color: #B59226;}
+.ground.button-hover{background-color: #B59226;}
+.psychic{background-color: #FF5599;border-color: #D00053;}
+.psychic.button-hover{background-color: #D00053;}
+.rock{background-color: #BBAA66;border-color: #88762C;}
+.rock.button-hover{background-color: #88762C;}
+.ice{background-color: #77DDFF;border-color: #13A8D9;}
+.ice.button-hover{background-color: #13A8D9;}
+.bug{background-color: #AABB22;border-color: #849400;}
+.bug.button-hover{background-color: #849400;}
+.dragon{background-color: #7766EE;border-color: #31229D;}
+.dragon.button-hover{background-color: #31229D;}
+.ghost{background-color: #6666BB;border-color: #42428E;}
+.ghost.button-hover{background-color: #42428E;}
+.dark{background-color: #775544;border-color: #442C21;}
+.dark.button-hover{background-color: #442C21;}
+.steel{background-color: #AAAABB;border-color: #74747B;}
+.steel.button-hover{background-color: #74747B;}
+.fairy{background-color: #FFAAFF;border-color: #EC67EA;}
+.fairy.button-hover{background-color: #EC67EA;}

@@ -1,0 +1,79 @@
+<view class="pannel">
+    <view class="imgview {{expand?'imgexpand':'imgblock'}}"
+           bindtap="expandBlock" >
+        <image class="image" mode="widthFix" src="./sxxk.png"></image>
+        <text class="imgtext">点击展开▼</text>
+    </view>
+    <view class="contain">
+        <view>攻击：</view>
+        <view class="cl bor" wx:for="{{btnList}}" wx:key="{{index}}" >
+            <view class="col-3">
+                <button class="block {{item.id}}" id="{{item.id}}" 
+                        bindtap="removeAttr" >{{item.text}}</button>
+            </view>
+            <view class="col-9">
+                <view wx:if="{{item.g['2'].length > 0}}">x2: {{item.g['2']}}</view>
+                <view wx:if="{{item.g['0.5'].length > 0}}">x0.5: {{item.g['0.5']}}</view>
+                <view wx:if="{{item.g['0'].length > 0}}">x0: {{item.g['0']}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="contain">
+        <view>防御：</view>
+        <view class="table">
+            <view class="tr">
+                <view class="th normal">普</view>
+                <view class="th fire">火</view>
+                <view class="th fighting">斗</view>
+                <view class="th water">水</view>
+                <view class="th flying">飞</view>
+                <view class="th grass">草</view>
+                <view class="th poison">毒</view>
+                <view class="th electric">电</view>
+                <view class="th ground">地</view>
+            </view>
+            <view class="tr">
+                <view class="td">{{def["一般"]}}</view>
+                <view class="td">{{def["火"]}}</view>
+                <view class="td">{{def["格斗"]}}</view>
+                <view class="td">{{def["水"]}}</view>
+                <view class="td">{{def["飞行"]}}</view>
+                <view class="td">{{def["草"]}}</view>
+                <view class="td">{{def["毒"]}}</view>
+                <view class="td">{{def["电"]}}</view>
+                <view class="td">{{def["地面"]}}</view>
+            </view>
+        </view>
+        <view class="table">
+            <view class="tr">
+                <view class="th psychic">超</view>
+                <view class="th rock">岩</view>
+                <view class="th ice">冰</view>
+                <view class="th bug">虫</view>
+                <view class="th dragon">龙</view>
+                <view class="th ghost">鬼</view>
+                <view class="th dark">恶</view>
+                <view class="th steel">钢</view>
+                <view class="th fairy">妖</view>
+            </view>
+            <view class="tr">
+                <view class="td">{{def["超能"]}}</view>
+                <view class="td">{{def["岩石"]}}</view>
+                <view class="td">{{def["冰"]}}</view>
+                <view class="td">{{def["虫"]}}</view>
+                <view class="td">{{def["龙"]}}</view>
+                <view class="td">{{def["幽灵"]}}</view>
+                <view class="td">{{def["恶"]}}</view>
+                <view class="td">{{def["钢"]}}</view>
+                <view class="td">{{def["妖精"]}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="fixed">
+      
+        <button wx:for="{{arr}}" wx:key="{{item.id}}"
+                bindtap="addAttr" id="{{item.id}}" 
+                class="block {{item.hide?'vishide':''}} {{item.id}}">{{item.text}}</button>
+      
+    </view>
+</view>
