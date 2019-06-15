@@ -81,6 +81,13 @@ Page({
     obj.nickName = nickName
     obj.avatarUrl = avatarUrl
     obj.openid = app.globalData.openid
+    if(!obj.explain){
+      return wx.showToast({
+        title: '请填写比赛说明',
+        icon: 'none',
+        duration: 2000
+      })
+    }
     if(obj.locaname==""){
       return wx.showToast({
         title: '请选择地址',

@@ -8,7 +8,9 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     hasMatchFlag:true,
     id:'',
-    statusMap:['','比赛结束','比赛删除']
+    statusMap:['','比赛结束','比赛删除'],
+    notice:[],
+    ntidx:0
   },
   onReady: function () {
     this.dialog = this.selectComponent("#dialog")
@@ -28,6 +30,15 @@ Page({
         })
       }
     }
+    _server.getNotice().then(res => {
+      if (res.code == 0 && res.data.length>0) {
+        setInterval(() => {
+          var ntidx = this.data.ntidx == res.data.length - 1 ? 0:this.data.ntidx+1
+          this.setData({ ntidx })
+        }, 2000)
+        this.setData({ notice: res.data })
+      }
+    })
   },
   onShow: function () {
     setTimeout(() => {
@@ -46,7 +57,7 @@ Page({
       if (res.code == 0) {
         var { avatarUrl, create_time, date, end_time, explain, locaaddr, locaname,
           nickName, number, openid, status, time, timelong, groupArr, _id } = res.data
-        create_time = new Date(create_time).toLocaleString()
+        create_time = _util.formatTime(create_time,3)
         this.setData({
           avatarUrl, create_time, date, end_time, explain, locaaddr, locaname,
           nickName, number, openid, status, time, timelong, groupArr, _id
@@ -70,9 +81,9 @@ Page({
   },
   //参赛 确认 按钮
   _confirmEvent () {
-    var { _id } = this.data
+    var { _id } = this.data, {avatarUrl, nickName} = app.globalData.userInfo
     this.dialog.hideDialog()
-    _server.joinOrder({ openid: app.globalData.openid, _id }).then(res => {
+    _server.joinOrder({ openid: app.globalData.openid, _id, avatarUrl, nickName }).then(res => {
       if (res.code == 0) {
         wx.showToast({
           title: res.msg,
@@ -84,10 +95,16 @@ Page({
       }
     })
   },
+  //不参赛  按钮
+  _cancelEvent () {
+    var { date } = this.data, {avatarUrl, nickName} = app.globalData.userInfo
+    this.dialog.hideDialog()
+    _server.notjoinOrder({ date, avatarUrl, nickName }).then()
+  },
   onShareAppMessage: function () {
     let that =this;
       return {
-        title: '@所有人 进来参赛', // 转发后 所显示的title
+        title: '@所有人 进来参赛，不来的都是臭弟弟', // 转发后 所显示的title
         path: '/pages/lastMatch/lastMatch?id='+that.data._id, // 相对的路径
       }
   },

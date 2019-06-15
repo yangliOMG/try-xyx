@@ -1,7 +1,15 @@
 <view class="container">
+	<view class="noticebox" wx:if="{{notice.length>0}}">
+		<view style="flex:0 0 50px;position:relative">
+			<image class="laba-style" src="../../ico/laba.png"></image>
+			<view style="display:inline-block;padding-left:20px">广播:</view>
+		</view>
+		<image class="userinfo-avatar" src="{{notice[ntidx].avatarUrl}}"></image>
+		<view style="flex:0 1 1">{{notice[ntidx].nickName}}不来参加{{notice[ntidx].date}}的比赛，自认铁弟弟</view>
+	</view>
 	<view wx:if="{{hasMatchFlag ? true : false}}">
 		<view wx:if="{{status==1||status==2 ? true : false}}" class="statusMark">{{statusMap[status]}}</view>
-		<view class="section clearfix">
+		<view class="section clearfix pt-10">
 			<view class="flex">
 				<image class="userinfo-avatar" src="{{avatarUrl}}"></image>
 				<view class="explain">{{explain}}</view>
@@ -61,6 +69,6 @@
 		<button wx:if="{{openid==groupArr[0].openid}}" class="button" bindtap="deleteClick">删除比赛</button>
 	</view>
 	
-	<pop id='dialog' bind:confirmEvent="_confirmEvent" />
+	<pop id='dialog' bind:confirmEvent="_confirmEvent" bind:cancelEvent="_cancelEvent" />
 </view>
 

@@ -12,7 +12,7 @@ App({
         if (res.code) {
           console.log(res.code)
           wx.request({
-            url: _this.globalData.serverUrl + '/user/wxMiniLogin.do',
+            url: _this.globalData.serverUrl + '/match/wxMiniLogin.do',
             data: { code: res.code, },
             success: function (res) {
               let arr = (res.header["Set-Cookie"] || res.header["set-cookie"]).split('session_key')

@@ -4,7 +4,7 @@
 			<view class="picker">
 				<view class="section__title col-3"><image class="icon-style" src="../../ico/riqi.png"></image>日期</view>
 				<view class="section__value col-8">{{dateArr[index]}}</view>
-				<view class="col-1">></view>
+				<view class="col-1"><image class="jiantou-style" src="../../ico/jiantou.png"></image></view>
 			</view>
 		</picker>
 	</view>
@@ -19,20 +19,20 @@
 				<view class="section__title col-3"><image class="icon-style" src="../../ico/shijian.png"></image>时间</view>
 				<view class="section__value col-8">
 				{{timeArr[0][index2[0]]}}{{end_time>0?'-'+endtimeFormat:''}} {{timeArr[1][index2[1]]}}</view>
-				<view class="col-1">></view>
+				<view class="col-1"><image class="jiantou-style" src="../../ico/jiantou.png"></image></view>
 			</view>
 		</picker>
 	</view>
 	<view class="section clearfix" bindtap="moveToLocation">
 		<view class="section__title col-3"><image class="icon-style" src="../../ico/didian.png"></image>地址</view>
 		<view class="section__value col-8">
-			<view wx:if="{{!mobileLocation.name}}">请选择地址</view>
+			<view wx:if="{{!mobileLocation.name}}" style="color:#aaa;">请选择地址</view>
 			<view>
 				<view class="locname">{{mobileLocation.name}}</view>
 				<view class="locaddr">{{mobileLocation.address}}</view>
 			</view>
 		</view>
-		<view class="col-1">></view>
+		<view class="col-1"><image class="jiantou-style" src="../../ico/jiantou.png"></image></view>
 	</view>
 	<view class="section section_gap border-b clearfix">
 		<view class="section__title"><image class="icon-style" src="../../ico/renyuan.png"></image>报名人数</view>

@@ -20,9 +20,10 @@ const formatTime = (date, mode) => {
   const second = date.getSeconds()
   const week = date.getDay()
   const map = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六']
-  // return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
   if(mode==2){
     return `${year}-${month}-${day}`
+  }else if(mode==3){
+    return [year, month, day].map(formatNumber).join('-') + ' ' + [hour, minute, second].map(formatNumber).join(':')
   }
   return `${month}月${day}日  ${map[week]}`
 }

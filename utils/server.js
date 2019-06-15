@@ -32,20 +32,26 @@ export function saveUserInfo(encryptedData,iv){
 }
 
 export function createOrder(params){
-    return ajaxPromise("/user/create.do",params,'POST')
+    return ajaxPromise("/match/create.do",params,'POST')
 }
 export function joinOrder(params){
-    return ajaxPromise("/user/join.do",params,'POST')
+    return ajaxPromise("/match/join.do",params,'POST')
+}
+export function notjoinOrder(params){
+    return ajaxPromise("/match/notjoin.do",params,'POST')
 }
 export function deleteOrder(params){
-    return ajaxPromise("/user/delete.do",params,'POST')
+    return ajaxPromise("/match/delete.do",params,'POST')
 }
 export function getOrder(openid){
-    return ajaxPromise("/user/get.do",{openid})
+    return ajaxPromise("/match/get.do",{openid})
 }
 export function getOrderById(id){
-    return ajaxPromise("/user/getbyid.do",{id})
+    return ajaxPromise("/match/getbyid.do",{id})
+}
+export function getNotice(){
+    return ajaxPromise("/match/getNotice.do")
 }
 export function getTest(){
-    return ajaxPromise("/user/test.do",)
+    return ajaxPromise("/match/test.do",)
 }

@@ -21,3 +21,5 @@ min-height: 1px;position: relative;float: left;padding-left: 5px;padding-right: 
 .vishide{visibility: hidden;}
 .bor{border-bottom: 1px solid #eee;padding-top: 10rpx;}
 .icon-style{display: inline-block;width: 25px;height: 25px;position: relative;top:6px}
+.jiantou-style{display: inline-block;width: 15px;height: 15px;position: relative;top:2px}
+.laba-style{display: inline-block;width: 20px;height: 20px;line-height:16px;position: absolute;top:-2px;left:0px;}
