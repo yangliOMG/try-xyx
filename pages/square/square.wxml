@@ -1,0 +1,21 @@
+<view>
+    <view class='game' id='game'>
+        <view wx:for="{{gameDivs}}" wx:key="{{index}}">
+            <view wx:for="{{gameDivs[index]}}"  wx:key="{{index}}" 
+                class="{{item.className}}" style="top:{{item.top}};left:{{item.left}}">
+            </view>
+        </view>
+    </view>
+    <view class='next' id='next'>
+        <view wx:for="{{nextDivs}}" wx:key="{{index}}">
+            <view wx:for="{{nextDivs[index]}}"  wx:key="{{index}}" 
+                class="{{item.className}}" style="top:{{item.top}};left:{{item.left}}">
+            </view>
+        </view>
+    </view>
+    <view class='info'>
+        <view>已用时：<text id='time'>0</text>s</view>
+        <view>已得分：<text id='score'>0</text>分</view>
+    </view>
+
+</view>

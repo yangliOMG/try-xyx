@@ -1,0 +1,12 @@
+form{background:#eee;display: block;}
+.section{font-size: 18px;background: #fff;padding: 0 0 0 5px;line-height:100rpx;}
+.section__title{color: grey;}
+.section__value{text-align: right;}
+.section_gap{margin-top: 10px;}
+.border-b{border-bottom: 1px solid #eee}
+.locname{line-height:20px;font-size:13px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.locaddr{line-height:20px;font-size:12px;color:grey;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+slider{margin:0;padding:10px 20px;}
+textarea{font-size: 14px;width:100%;line-height:22px;height: 100px;}
+.button{margin: 10px}
+.logo{width:100%}

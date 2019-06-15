@@ -1,13 +1,35 @@
 {
-  "pages":[
-    "pages/sxxk/sxxk",
+  "pages": [
+    "pages/lastMatch/lastMatch",
+    "pages/create/create",
     "pages/index/index",
+    "pages/sxxk/sxxk",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "口袋妖怪属性计算器",
-    "navigationBarTextStyle":"black"
-  }
+    "navigationBarTitleText": "郫筒镇坝坝球",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#179B16",
+    "backgroundColor": "#eee",
+    "list": [
+      {
+        "pagePath": "pages/lastMatch/lastMatch",
+        "text": "最新比赛",
+        "iconPath": "./ico/jblogo1.png",
+        "selectedIconPath": "./ico/jblogo.png"
+      },
+      {
+        "pagePath": "pages/create/create",
+        "text": "发起比赛",
+        "iconPath": "./ico/addlogo1.png",
+        "selectedIconPath": "./ico/addlogo.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }

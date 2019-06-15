@@ -1,0 +1,17 @@
+<!--pages/common/pop/pop.wxml-->
+<view class='wx_dialog' hidden="{{!isShow}}">
+  <view class='wx-mask'></view>
+  <view class='wx-dialog-content'>
+    <view class='wx-dialog-contents'>
+      <view class='wx-dialog-btn-line' catchtap='_confirmEvent'>参加</view>
+      <view class='wx-dialog-btn-line' catchtap='_confirmEvent'>积极参加</view>
+      <view class='wx-dialog-btn-line' catchtap='_confirmEvent'>参加并买水</view>
+    </view>
+    <!--view class='wx-dialog-title'>{{ title }}</view>
+    <view class='wx-dialog-contents'>{{ content }}</view>
+    <view class='wx-dialog-footer'>
+      <view class='wx-dialog-btn' catchtap='_cancelEvent'>{{ cancelText }}</view>
+      <view class='wx-dialog-btn' catchtap='_confirmEvent'>{{ confirmText }}</view>
+    </view-->
+  </view>
+</view>

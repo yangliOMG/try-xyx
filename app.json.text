@@ -14,17 +14,24 @@
     "color":"#000",
     "selectedColor":"#3399FF",
     "backgroundColor":"#eee",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页"
-    }, {
-      "pagePath": "pages/logs/logs",
-      "text": "日志"
-    }, {
-      "pagePath": "pages/sxxk/sxxk",
-      "text": "口袋妖怪",
-      "iconPath":"./ico/wikilogo1.png",
-      "selectedIconPath":"./ico/wikilogo.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/lastMatch/lastMatch",
+        "text": "最新比赛"
+      },
+      {
+        "pagePath": "pages/create/create",
+        "text": "发起比赛"
+      },
+      {
+        "pagePath": "pages/sxxk/sxxk",
+        "text": "口袋妖怪",
+        "iconPath": "./ico/wikilogo1.png",
+        "selectedIconPath": "./ico/wikilogo.png"
+      }]
   }
 }

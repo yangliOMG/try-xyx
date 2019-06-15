@@ -1,0 +1,63 @@
+<form bindsubmit="formSubmit">
+	<view class="section clearfix">
+		<picker bindchange="bindPickerChange" value="{{index}}" range="{{dateArr}}">
+			<view class="picker">
+				<view class="section__title col-3"><image class="icon-style" src="../../ico/riqi.png"></image>日期</view>
+				<view class="section__value col-8">{{dateArr[index]}}</view>
+				<view class="col-1">></view>
+			</view>
+		</picker>
+	</view>
+	<view class="section clearfix">
+		<picker
+		 mode="multiSelector"
+		 bindchange="bindMultiPickerChange"
+		 value="{{index2}}"
+		 range="{{timeArr}}"
+		>
+			<view class="picker">
+				<view class="section__title col-3"><image class="icon-style" src="../../ico/shijian.png"></image>时间</view>
+				<view class="section__value col-8">
+				{{timeArr[0][index2[0]]}}{{end_time>0?'-'+endtimeFormat:''}} {{timeArr[1][index2[1]]}}</view>
+				<view class="col-1">></view>
+			</view>
+		</picker>
+	</view>
+	<view class="section clearfix" bindtap="moveToLocation">
+		<view class="section__title col-3"><image class="icon-style" src="../../ico/didian.png"></image>地址</view>
+		<view class="section__value col-8">
+			<view wx:if="{{!mobileLocation.name}}">请选择地址</view>
+			<view>
+				<view class="locname">{{mobileLocation.name}}</view>
+				<view class="locaddr">{{mobileLocation.address}}</view>
+			</view>
+		</view>
+		<view class="col-1">></view>
+	</view>
+	<view class="section section_gap border-b clearfix">
+		<view class="section__title"><image class="icon-style" src="../../ico/renyuan.png"></image>报名人数</view>
+		<slider
+		 name="number"
+		 show-value
+		 value="7"
+		 min="7"
+		 max="50"
+		/>
+	</view>
+	<view class="section border-b clearfix">
+		<view class="section__title"><image class="icon-style" src="../../ico/shuoming.png"></image>比赛说明：</view>
+		<textarea placeholder="请输入说明，比如李福孙是个憨憨" name="explain" />
+		</view>
+	<view class="section clearfix" style="padding:10px">
+		<button wx:if="{{!hasUserInfo && canIUse}}" 
+			class="button" type="primary"
+			open-type="getUserInfo" 
+			bindgetuserinfo="getUserInfo"
+			> 是否参赛 </button>
+		<button wx:else class="button" form-type="submit" type="primary">发起比赛</button>
+	</view>
+	<view style="padding:10px;background:#fff">
+		<image class="logo" mode="widthFix" src="../../ico/logo.jpg"></image>
+	</view>
+</form>
+

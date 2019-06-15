@@ -1,0 +1,66 @@
+<view class="container">
+	<view wx:if="{{hasMatchFlag ? true : false}}">
+		<view wx:if="{{status==1||status==2 ? true : false}}" class="statusMark">{{statusMap[status]}}</view>
+		<view class="section clearfix">
+			<view class="flex">
+				<image class="userinfo-avatar" src="{{avatarUrl}}"></image>
+				<view class="explain">{{explain}}</view>
+			</view>
+		</view>
+		<view class="section pt-10 lh-40 clearfix">
+			<view class="col-12">
+				<image class="icon-style" src="../../ico/shijian.png"></image>
+				{{date}} {{time}} {{timelong}}
+			</view>
+		</view>
+		<view class="section clearfix">
+			<view class="col-12">
+				<view>
+					<image class="icon-style" src="../../ico/didian.png"></image>
+					{{locaname}}
+				</view>
+				<view class="address">{{locaaddr}}</view>
+			</view>
+		</view>
+		<view class="section section_gap pt-10 clearfix">
+			<view class="col-12 number">
+				<image class="icon-style" src="../../ico/renyuan.png"></image>
+				共<text class="red">{{number}}</text>个名额
+			</view>
+			<view>
+				<view class="box" wx:for="{{groupArr}}" wx:key="{{item._id}}">
+					<view class="box-flex">
+						<image class="userinfo-avatar" src="{{item.avatarUrl}}"></image>
+						<view class="box_name">{{item.nickName}}</view>
+					</view>
+				</view>
+			</view>
+			<view class="last section__title">比赛剩余{{number-groupArr.length}}个名额</view>
+			<view class="last section__title">比赛发布时间：{{create_time}}</view>
+		</view>
+		<view class="section clearfix flex" style="padding:10px">
+			<view style="flex:1">
+				<button wx:if="{{!hasUserInfo && canIUse}}" 
+					class="button" type="primary"
+					open-type="getUserInfo" 
+					bindgetuserinfo="getUserInfo"
+					> 是否登录参赛 </button>
+				<button wx:else class="button" type="primary" bindtap="openModal">是否参赛</button>
+			</view>
+			<view style="flex:1">
+				<button class="button" open-type='share' bindtap="onShareAppMessage">分享比赛</button>
+			</view>
+		</view>
+	</view>
+	<view wx:else class="blank">
+		暂无比赛
+	</view>
+	<view class="section clearfix" style="padding:10px">
+		<view class="section__title" style="font-size:16px">更多选项</view>
+		<button class="button" bindtap="trynewClick">试一试？也发起一场比赛</button>
+		<button wx:if="{{openid==groupArr[0].openid}}" class="button" bindtap="deleteClick">删除比赛</button>
+	</view>
+	
+	<pop id='dialog' bind:confirmEvent="_confirmEvent" />
+</view>
+
