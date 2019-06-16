@@ -46,9 +46,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 1,
 					"name": "发起比赛",
-					"pathName": "pages/create/create",
+					"pathName": "pages/index/index",
+					"query": "",
 					"scene": null
 				}
 			]

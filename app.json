@@ -28,6 +28,12 @@
         "text": "发起比赛",
         "iconPath": "./ico/addlogo1.png",
         "selectedIconPath": "./ico/addlogo.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "./ico/renyuan.png",
+        "selectedIconPath": "./ico/renyuan1.png"
       }
     ]
   },

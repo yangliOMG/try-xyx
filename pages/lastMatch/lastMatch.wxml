@@ -52,7 +52,7 @@
 					class="button" type="primary"
 					open-type="getUserInfo" 
 					bindgetuserinfo="getUserInfo"
-					> 是否登录参赛 </button>
+					> 登录参赛 </button>
 				<button wx:else class="button" type="primary" bindtap="openModal">是否参赛</button>
 			</view>
 			<view style="flex:1">

@@ -83,6 +83,13 @@ Page({
   _confirmEvent () {
     var { _id } = this.data, {avatarUrl, nickName} = app.globalData.userInfo
     this.dialog.hideDialog()
+    if(!avatarUrl){
+      return wx.showToast({
+        title: 'userinfo为空',
+        icon: 'none',
+        duration: 2000
+      })
+    }
     _server.joinOrder({ openid: app.globalData.openid, _id, avatarUrl, nickName }).then(res => {
       if (res.code == 0) {
         wx.showToast({
@@ -99,6 +106,13 @@ Page({
   _cancelEvent () {
     var { date } = this.data, {avatarUrl, nickName} = app.globalData.userInfo
     this.dialog.hideDialog()
+    if(!avatarUrl){
+      return wx.showToast({
+        title: 'userinfo为空',
+        icon: 'none',
+        duration: 2000
+      })
+    }
     _server.notjoinOrder({ date, avatarUrl, nickName }).then()
   },
   onShareAppMessage: function () {

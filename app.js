@@ -2,7 +2,7 @@
 App({
   globalData: {
     serverUrl: 'https://yanggongcundong.natappvip.cc',    //http://192.168.20.199:9093       https://yanggongcundong.natappvip.cc
-    userInfo: {},
+    userInfo:null,
     openid:''
   },
   onLaunch: function () {
