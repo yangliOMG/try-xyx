@@ -11,6 +11,7 @@
 			/>
 			<text class="userinfo-nickname">{{userInfo.nickName}}</text>
 		</block>
+		<button type="primary" size="mini" open-type="openSetting" bindopensetting="openSetting">设置</button>
 	</view>
 	<view class="section clearfix" bindtap="moveToLocation">
 		<view class="section__title col-12">

@@ -56,14 +56,14 @@ Page({
     promise.then(res => {
       if (res.code == 0) {
         var { avatarUrl, create_time, date, end_time, explain, locaaddr, locaname,
-          nickName, number, openid, status, time, timelong, groupArr, _id } = res.data
+          nickName, number,  status, time, timelong, groupArr, _id } = res.data
         create_time = _util.formatTime(create_time,3)
         this.setData({
           avatarUrl, create_time, date, end_time, explain, locaaddr, locaname,
-          nickName, number, openid, status, time, timelong, groupArr, _id
+          nickName, number,  status, time, timelong, groupArr, _id, hasMatchFlag:true
         })
       }else{
-        this.data.hasMatchFlag = false
+        this.setData({ hasMatchFlag:false })
       }
     })
     // _server.getTest().then()

@@ -65,7 +65,13 @@ Page({
         that.setData({ mobileLocation })
       },
       fail: function (err) {
-        console.log(err)
+        if(err.errMsg.includes("deny")||err.errMsg.includes("denied")){
+          wx.showModal({
+            title: '用户未授权',
+            content: '如需正常使用小程序功能，【我的】->【设置】->勾选位置信息',
+            showCancel: false
+          })
+        }
       }
     });
   },

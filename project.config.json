@@ -48,8 +48,8 @@
 				{
 					"id": 1,
 					"name": "发起比赛",
-					"pathName": "pages/index/index",
-					"query": "",
+					"pathName": "pages/lastMatch/lastMatch",
+					"query": "id=5d073bbe883bdf0a601940e6",
 					"scene": null
 				}
 			]

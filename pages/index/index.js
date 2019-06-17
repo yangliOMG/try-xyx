@@ -50,5 +50,8 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  openSetting: function(e) {
+    console.log(e)
   }
 })
