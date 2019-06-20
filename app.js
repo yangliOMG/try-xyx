@@ -1,7 +1,7 @@
 //app.js
 App({
   globalData: {
-    serverUrl: 'https://yanggongcundong.natappvip.cc',    //http://192.168.20.199:9093       https://yanggongcundong.natappvip.cc
+    serverUrl: 'https://www.qifumingdeng.com',    //https://www.qifumingdeng.com       https://yanggongcundong.natappvip.cc
     userInfo:null,
     openid:''
   },

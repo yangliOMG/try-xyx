@@ -60,7 +60,7 @@ Page({
         create_time = _util.formatTime(create_time,3)
         this.setData({
           avatarUrl, create_time, date, end_time, explain, locaaddr, locaname,
-          nickName, number,  status, time, timelong, groupArr, _id, hasMatchFlag:true
+          nickName, number,openid,  status, time, timelong, groupArr, _id, hasMatchFlag:true
         })
       }else{
         this.setData({ hasMatchFlag:false })
