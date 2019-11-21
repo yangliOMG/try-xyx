@@ -10,10 +10,13 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../sxxk/sxxk'
-    })
+  bindViewTap: function(e) {
+    let path = e.currentTarget.id
+    if(path){
+      wx.navigateTo({
+        url: '../'+path+'/'+path
+      })
+    }
   },
   onLoad: function () {
     if (app.globalData.userInfo) {

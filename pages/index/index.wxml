@@ -1,14 +1,10 @@
 <!--index.wxml-->
 <view class="container">
 	<view class="userinfo">
-		<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+		<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称
+		</button>
 		<block wx:else>
-			<image
-			 bindtap="bindViewTap"
-			 class="userinfo-avatar"
-			 src="{{userInfo.avatarUrl}}"
-			 mode="cover"
-			/>
+			<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover" />
 			<text class="userinfo-nickname">{{userInfo.nickName}}</text>
 		</block>
 		<button type="primary" size="mini" open-type="openSetting" bindopensetting="openSetting">设置</button>
@@ -16,17 +12,21 @@
 	<view class="section clearfix" bindtap="moveToLocation">
 		<view class="section__title col-12">
 			<image class="icon-style" src="../../ico/more.png" />
-      <view class="icon-title">更多版块</view>
-			
+			<view class="icon-title">更多版块</view>
 		</view>
 		<view style="text-align:center">
-			<view class="col-4" bindtap="bindViewTap">
-        <!--view class="box">
-				  <image class="area-avatar" src="../../ico/wikilogo.png" mode="cover" />
-          <view class="area-name">属性计算器</view>
-        </view-->
+			<view class="col-4" bindtap="bindViewTap" id='sxxk'>
+				<view class="box">
+					<image class="area-avatar" src="../../ico/wikilogo.png" mode="cover" />
+					<view class="area-name">属性计算器</view>
+				</view>
+			</view>
+			<view class="col-4" bindtap="bindViewTap" id='jxll'>
+				<view class="box">
+					<image class="area-avatar" src="../../ico/wikilogo.png" mode="cover" />
+					<view class="area-name">觉醒力量</view>
+				</view>
 			</view>
 		</view>
 	</view>
 </view>
-

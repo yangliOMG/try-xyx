@@ -16,9 +16,10 @@ page{background: #eee}
 min-height: 1px;position: relative;float: left;padding-left: 5px;padding-right: 5px;box-sizing: border-box;transition: all 0.3s ease-in;}
 
 .cl:after,.clearfix:after{content:"\20";display:block;height:0;clear:both;visibility:hidden}.cl,.clearfix{zoom:1;}
-
+.mb-10{margin-bottom: 10px}
 .red{color:red}
 .vishide{visibility: hidden;}
+.hide{display: none;}
 .bor{border-bottom: 1px solid #eee;padding-top: 10rpx;}
 .icon-style{display: inline-block;width: 25px;height: 25px;position: relative;top:6px}
 .jiantou-style{display: inline-block;width: 15px;height: 15px;position: relative;top:2px}

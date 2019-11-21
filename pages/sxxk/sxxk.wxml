@@ -6,7 +6,7 @@
     </view>
     <view class="contain">
         <view>攻击：</view>
-        <view class="cl bor" wx:for="{{btnList}}" wx:key="{{index}}" >
+        <view class="cl bor" wx:for="{{btnList}}" wx:key="index" >
             <view class="col-3">
                 <button class="block {{item.id}}" id="{{item.id}}" 
                         bindtap="removeAttr" >{{item.text}}</button>
@@ -71,7 +71,7 @@
     </view>
     <view class="fixed">
       
-        <button wx:for="{{arr}}" wx:key="{{item.id}}"
+        <button wx:for="{{arr}}" wx:key="id"
                 bindtap="addAttr" id="{{item.id}}" 
                 class="block {{item.hide?'vishide':''}} {{item.id}}">{{item.text}}</button>
       

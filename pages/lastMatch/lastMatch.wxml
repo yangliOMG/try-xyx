@@ -36,7 +36,7 @@
 				共<text class="red">{{number}}</text>个名额
 			</view>
 			<view>
-				<view class="box" wx:for="{{groupArr}}" wx:key="{{item._id}}">
+				<view class="box" wx:for="{{groupArr}}" wx:key="_id">
 					<view class="box-flex">
 						<image class="userinfo-avatar" src="{{item.avatarUrl}}"></image>
 						<view class="box_name">{{item.nickName}}</view>

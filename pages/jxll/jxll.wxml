@@ -1,0 +1,28 @@
+<view class="pannel">
+    <view class="text">
+        <view>{{value}}</view>
+    </view>
+    <view class="contain">
+        <view>快速计算：(输入个体值)</view>
+        <view>HP/物攻/物防/速度/特攻/特防</view>
+        <view class="cl">
+            <view class="col-12">
+                <input class="weui-input" id='ss' auto-focus bindinput="bindKeyInput" placeholder="HP/物攻/物防/速度/特攻/特防"/>
+            </view>
+        </view>
+    </view>
+    <view class="contain hide">
+        <view>输入数值：</view>
+        <view class="cl bor">
+            <view class="col-6 mb-10" wx:for="{{inpList}}" wx:key="id">
+                <view class="col-4">{{item.text}}:</view>
+                <view class="col-8">
+                    <input id="{{item.id}}" class="weui-input2" type="number" bindinput="bindKeyInput" placeholder="0~31"/>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="contain">
+        <button class="block dragon" bindtap="count" >计算觉醒力量属性</button>
+    </view>
+</view>

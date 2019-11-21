@@ -1,0 +1,20 @@
+.pannel{margin-top: 10px;}
+.contain{padding: 10rpx;margin-bottom: 10px;background: #fff;box-shadow: 2px 2px 2px #aaa;}
+.text{text-align: center;font-size: 40px;padding: 20px;height: 120px;line-height: 120px}
+
+.dragon{background-color: #7766EE;border-color: #31229D;}
+.dragon.button-hover{background-color: #31229D;}
+
+.weui-input {
+    height: 2.58823529em;
+    min-height: 2.58823529em;
+    line-height: 2.58823529em;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+.weui-input2 {
+    border-bottom: 1px solid #aaa;
+    text-align: center
+}
+

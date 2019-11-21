@@ -4,6 +4,7 @@
     "pages/create/create",
     "pages/index/index",
     "pages/sxxk/sxxk",
+    "pages/jxll/jxll",
     "pages/logs/logs"
   ],
   "window": {
