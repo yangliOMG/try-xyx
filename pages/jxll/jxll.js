@@ -1,3 +1,5 @@
+import _json from '../sxxk/sxxk.json'
+
 Page({
     data: {
         inpList: [
@@ -8,9 +10,13 @@ Page({
             { id: 'tg', text: '特攻' },
             { id: 'tf', text: '特防' }
         ],
-        value:''
+        value:'',
+        arr: {},
+        jxList:[],
+        jxtext:''
     },
     onLoad: function () {
+        this.setData({arr:_json})
     },
     count: function () {
         let { ss } = this.data
@@ -36,4 +42,9 @@ Page({
         let key = e.target.id, value = e.detail.value
         this.setData({ [key]: value })
     },
+    addAttr: function (e) {
+        let id = e.target.id
+        let data = _json[id]
+        this.setData({jxList: data.jxll, value:data.text})
+    }
 })

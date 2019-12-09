@@ -7,7 +7,7 @@
         <view>HP/物攻/物防/速度/特攻/特防</view>
         <view class="cl">
             <view class="col-12">
-                <input class="weui-input" id='ss' auto-focus bindinput="bindKeyInput" placeholder="HP/物攻/物防/速度/特攻/特防"/>
+                <input class="weui-input" id='ss' auto-focus bindinput="bindKeyInput" placeholder="HP/物攻/物防/速度/特攻/特防" />
             </view>
         </view>
     </view>
@@ -17,12 +17,35 @@
             <view class="col-6 mb-10" wx:for="{{inpList}}" wx:key="id">
                 <view class="col-4">{{item.text}}:</view>
                 <view class="col-8">
-                    <input id="{{item.id}}" class="weui-input2" type="number" bindinput="bindKeyInput" placeholder="0~31"/>
+                    <input id="{{item.id}}" class="weui-input2" type="number" bindinput="bindKeyInput"
+                        placeholder="0~31" />
                 </view>
             </view>
         </view>
     </view>
+    <view class="contain mb-10">
+        <button class="dragon" bindtap="count">计算觉醒力量属性</button>
+    </view>
+
     <view class="contain">
-        <button class="block dragon" bindtap="count" >计算觉醒力量属性</button>
+        <view>速查表：(1代表奇数，0代表偶数)</view>
+        <view class="table">
+            <view class="tr">
+                <view class="th water">HP</view>
+                <view class="th water">攻击</view>
+                <view class="th water">防御</view>
+                <view class="th water">速度</view>
+                <view class="th water">特攻</view>
+                <view class="th water">特防</view>
+            </view>
+            <view class="tr" wx:for="{{jxList}}" wx:for-item="row" wx:key="index">
+                <view wx:for="{{row}}" wx:key="index" class="td {{row[index]?'c-red':''}}" >{{row[index]}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="fixed">
+        <button wx:for="{{arr}}" wx:key="id" bindtap="addAttr" id="{{item.id}}"
+            class="block {{item.id}}">{{item.text}}</button>
+
     </view>
 </view>
